@@ -16,12 +16,12 @@ meas_uncertain_mix_func <- function(dat, n_iter, seed = 12345){
     sim_CM <- as.data.frame(t(apply(dat[,c('C', 'F814W', 'M_err', 'C_err')], 1,
                                     function(x){MASS::mvrnorm(n = 1, x[c(1,2)], Sigma = matrix(c(x[4]^2, x[3]^2, x[3]^2, x[3]^2), 2))})))
 
-    dat <- filter(sim_CM, C > 0.8 & C < 2.4)[,c('C', 'F814W')]
-    sim_dat <- bind_rows(sim_dat, dat)
-    M <- dat$F814W
-    C <- dat$C
+    data <- filter(sim_CM, C > 0.8 & C < 2.4)[,c('C', 'F814W')]
+    sim_dat <- bind_rows(sim_dat, data)
+    M <- data$F814W
+    C <- data$C
     idx <- which(sim_CM$C > 0.8 & sim_CM$C < 2.4)
-    res <- optim(c(0.6, 0.5, 1.2, 1.5, 0.16, 1.6, 0.1, 26.3, 0.3), mix_func, dat = dat,
+    res <- optim(c(0.6, 0.5, 1.2, 1.5, 0.16, 1.6, 0.1, 26.3, 0.3), mix_func, dat = data,
                  method = "L-BFGS-B", lower = c(0, 0, 0.9, 1.25, 0.1, 1.5, 0.1, 26, 0.1), upper = c(1, 1, 1.5, 1.5, 0.5, 1.8, 0.5, 27, 0.6))$par
 
     par_mat[i,] <- res
