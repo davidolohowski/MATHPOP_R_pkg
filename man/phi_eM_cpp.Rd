@@ -2,7 +2,7 @@
 % Please edit documentation in R/RcppExports.R
 \name{phi_eM_cpp}
 \alias{phi_eM_cpp}
-\title{C++ implementation to calculate the density function of the noisy GCLF}
+\title{C++ implementation to calculate the value of the noisy GCLF given the observed noisy magnitude \code{M}.}
 \usage{
 phi_eM_cpp(M, mu, sigma, m0, b0, b1, n = 20L)
 }
@@ -21,6 +21,10 @@ phi_eM_cpp(M, mu, sigma, m0, b0, b1, n = 20L)
 
 \item{n}{Integer. Number of integration points used to marginalize out the true magnitude. Default to 20.}
 }
+\value{
+A numeric vector that gives the value of the noisy GCLF given the observed noisy magnitude \code{M}.
+}
 \description{
-C++ implementation to calculate the density function of the noisy GCLF
+Compute the noisy GCLF evaluated at \code{M} based on \deqn{\varphi(m; \mu_{\text{TO}}, \sigma^2) = \int_{-\infty}^\infty\phi(m; m_t, \sigma_M^2(m_t))\phi(m_t; \mu_{\text{TO}}, \sigma^2)dm_t,}
+where \eqn{\phi(m; m_t, \sigma_M^2(m_t))} is a Gaussian density that gives the probability density of the noisy magnitude \eqn{m} given the true magnitude \eqn{m_t}. \eqn{\phi(m_t; \mu_{\text{TO}}, \sigma^2)} is the true GCLF with TO point \eqn{\mu_{\text{TO}}} and dispersion \eqn{\sigma}, evaluated at the true magnitude \eqn{m_t}.
 }

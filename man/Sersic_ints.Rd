@@ -2,7 +2,7 @@
 % Please edit documentation in R/Sersic_ints.R
 \name{Sersic_ints}
 \alias{Sersic_ints}
-\title{Function to compute the intensity at the locations of a point pattern X given a Sersic intensity profile}
+\title{Function to compute the intensity at the locations of a point pattern \code{X} given a Sersic intensity profile}
 \usage{
 Sersic_ints(X, c, N, R_eff, e = 1, n = 0.5, theta = 0)
 }
@@ -19,13 +19,14 @@ Sersic_ints(X, c, N, R_eff, e = 1, n = 0.5, theta = 0)
 
 \item{n}{A non-negative numeric value. Sersic index of the GC system of a galaxy.}
 
-\item{theta}{A numeric value in (0, 2*pi). Orientation angle (in radian) of the GC system of a galaxy.}
+\item{theta}{A numeric value in \eqn{(0, 2\pi)}. Orientation angle (in radian) of the GC system of a galaxy.}
 }
 \value{
-A numeric vector with the length equal to the number of row of X that gives the Sersic intensity at the locations specified by X.
+A numeric vector with the length equal to the number of row of \code{X} that gives the Sersic intensity at the locations specified by \code{X}.
 }
 \description{
-Function to compute the intensity at the locations of a point pattern X given a Sersic intensity profile
+Compute the intensity of a point pattern \code{X} based on the Sersic profile given by \deqn{\Lambda(\mathbf{X}; N, R_h, n) = \frac{N b_n^{2n}}{2\pi R_h^2 n \Gamma(2n)e}\exp\left(-b_n\left(\frac{r(\mathbf{X})}{R_h}\right)^{1/n}\right),}
+where \deqn{r^2(\mathbf{X}) = ((\mathbf{X}_x - c_x)\cos(\vartheta) - (\mathbf{X}_y - c_y)\sin(\vartheta))^2 + ((\mathbf{X}_x- c_x)\sin(\vartheta)+ (\mathbf{X}_y-c_y)\cos(\vartheta))^2/e^2.}.
 }
 \keyword{Intensity}
 \keyword{Sersic}

@@ -1,15 +1,15 @@
 [
     {
-        "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
-        "file_last_write": 1721001209.0,
+        "file": "/Users/davidolohowski/Desktop/MATHPOP_R_pkg/src/cpp_help_func.cpp",
+        "file_last_write": 1721071000.0,
         "definitions": [
             {
                 "usr": "c:@F@err_M_cpp#d#d#d#d#",
                 "kind": 6,
                 "parent_name": "",
                 "name": "err_M_cpp(double, double, double, double)",
-                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
-                "line": 12,
+                "file": "/Users/davidolohowski/Desktop/MATHPOP_R_pkg/src/cpp_help_func.cpp",
+                "line": 15,
                 "column": 8,
                 "hidden": false
             },
@@ -18,8 +18,8 @@
                 "kind": 6,
                 "parent_name": "",
                 "name": "f_cpp(NumericVector, double, double)",
-                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
-                "line": 23,
+                "file": "/Users/davidolohowski/Desktop/MATHPOP_R_pkg/src/cpp_help_func.cpp",
+                "line": 29,
                 "column": 15,
                 "hidden": false
             },
@@ -28,8 +28,8 @@
                 "kind": 6,
                 "parent_name": "",
                 "name": "f_cpp_trunc(NumericVector, double, double)",
-                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
-                "line": 29,
+                "file": "/Users/davidolohowski/Desktop/MATHPOP_R_pkg/src/cpp_help_func.cpp",
+                "line": 35,
                 "column": 15,
                 "hidden": false
             },
@@ -38,8 +38,8 @@
                 "kind": 6,
                 "parent_name": "",
                 "name": "dnorm_cpp(double, double, double)",
-                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
-                "line": 35,
+                "file": "/Users/davidolohowski/Desktop/MATHPOP_R_pkg/src/cpp_help_func.cpp",
+                "line": 41,
                 "column": 8,
                 "hidden": false
             },
@@ -48,8 +48,8 @@
                 "kind": 6,
                 "parent_name": "",
                 "name": "phi_eM_cpp(NumericVector, double, double, double, double, double, int)",
-                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
-                "line": 58,
+                "file": "/Users/davidolohowski/Desktop/MATHPOP_R_pkg/src/cpp_help_func.cpp",
+                "line": 68,
                 "column": 15,
                 "hidden": false
             },
@@ -58,8 +58,8 @@
                 "kind": 6,
                 "parent_name": "",
                 "name": "Phi_f_cpp(double, double, double, int, double)",
-                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
-                "line": 81,
+                "file": "/Users/davidolohowski/Desktop/MATHPOP_R_pkg/src/cpp_help_func.cpp",
+                "line": 91,
                 "column": 8,
                 "hidden": false
             },
@@ -68,8 +68,8 @@
                 "kind": 6,
                 "parent_name": "",
                 "name": "p_eM_cpp(double, double, double, double, double, double, double, int)",
-                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
-                "line": 99,
+                "file": "/Users/davidolohowski/Desktop/MATHPOP_R_pkg/src/cpp_help_func.cpp",
+                "line": 113,
                 "column": 8,
                 "hidden": false
             },
@@ -78,8 +78,8 @@
                 "kind": 6,
                 "parent_name": "",
                 "name": "Phi_f_trun_cpp(double, double, double, int, double)",
-                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
-                "line": 111,
+                "file": "/Users/davidolohowski/Desktop/MATHPOP_R_pkg/src/cpp_help_func.cpp",
+                "line": 125,
                 "column": 8,
                 "hidden": false
             },
@@ -88,8 +88,8 @@
                 "kind": 6,
                 "parent_name": "",
                 "name": "p_eM_trun_cpp(double, double, double, double, double, double, double, double, int)",
-                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
-                "line": 126,
+                "file": "/Users/davidolohowski/Desktop/MATHPOP_R_pkg/src/cpp_help_func.cpp",
+                "line": 140,
                 "column": 8,
                 "hidden": false
             }

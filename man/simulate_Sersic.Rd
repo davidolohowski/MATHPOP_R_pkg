@@ -17,13 +17,14 @@ simulate_Sersic(N, c, R_eff, e, n, theta)
 
 \item{n}{A non-negative numeric value. Sersic index of the GC system of a galaxy.}
 
-\item{theta}{A numeric value in (0, 2*pi). Orientation angle (in radian) of the GC system of a galaxy.}
+\item{theta}{A numeric value in \eqn{(0, 2\pi)}. Orientation angle (in radian) of the GC system of a galaxy.}
 }
 \value{
 A data frame with \code{N} number of row and two columns that gives the locations of the simulated point pattern.
 }
 \description{
-Simulate point pattern from a given Sersic profile
+Simulate point pattern from a given Sersic profile given by \deqn{\Lambda(s; N, R_h, n) = \frac{N b_n^{2n}}{2\pi R_h^2 n \Gamma(2n)e}\exp\left(-b_n\left(\frac{r(s)}{R_h}\right)^{1/n}\right),}
+where \deqn{r^2(s) = ((s_x - c_x)\cos(\vartheta) - (s_y - c_y)\sin(\vartheta))^2 + ((s_x- c_x)\sin(\vartheta)+ (s_y-c_y)\cos(\vartheta))^2/e^2.}.
 }
 \keyword{Intensity}
 \keyword{Sersic}

@@ -1,10 +1,10 @@
 Package: MATHPOP
 Title: Point process models for inferring properties of globular cluster system in Ultra-Diffuse Galaxies
-Version: 0.0.0.9000
+Version: 0.0.0.9
 Authors@R: person("Dayi", "Li", , "dayi.li@mail.utoronto.ca", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-5478-3966"))
 Description: MArked-dependently THinned POint Process (MATHPOP) model for inferring the globular cluster counts and their luminosity functions in Ultra-Diffuse Galaxies.
-License: `use_gpl3_license()` 
+License: GNU GPL-v3.0
 Imports: Rcpp (>= 1.0.11), tidyverse, mixtools, sf, sp, raster, spatstat, VGAM,
         progress, tikzDevice, ggridges, wesanderson,
         ggnewscale, modeest, reshape2, HDInterval, parallel, loo, priorsense,

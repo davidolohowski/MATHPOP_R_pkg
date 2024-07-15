@@ -1,4 +1,18 @@
-# simulate GC data
+#' Simulate GC locations and magnitudes (without measurement uncertainty) based on a Sersic profile and Gaussian GCLF.
+#' 
+#' @param S A `SpatialPolygonsDataFrame` that gives the spatial domain on which the point pattern resides.
+#' @param l0 A positive numeric value. The intensity (/kpc^2) of GCs in the IGM.
+#' @param c A matrix with two columns for the central locations of galaxies in `S`. The first column is the x coordinate of the galactic centers, the second column is the y coordinate.
+#' @param N A (non-negative) numeric vector with length `nrow(c)`. Each element is the mean number of GCs in a galaxy.
+#' @param R_eff A (non-negative) numeric vector with length `nrow(c)`. Each element is the half-number radius of the GC system of a galaxy.
+#' @param e A (non-negative) numeric vector with length `nrow(c)`. Each element is the aspect ratio of the GC system of a galaxy.
+#' @param n A (non-negative) numeric vector with length `nrow(c)`. Each element is the Sersic index of the GC system of a galaxy.
+#' @param theta A numeric vector with length `nrow(c)`. Each element is within (0, 2*pi) and is the orientation angle of the GC system of a galaxy.
+#' @param mu A numeric vector with length `nrow(c) + 1`. Each element is the GCLF TO point of each of the `nrow(c) + 1` GC sub-populations.
+#' @param sigma A numeric vector with length `nrow(c) + 1`. Each element is the GCLF dispersion of each of the `nrow(c) + 1` GC sub-populations.
+#' @keywords Simulate Point Patterns Sersic
+#' @export
+#' @return A data frame with four columns. `x`, `y` columns give the locations of the simulated GCs. `M` gives the GC magnitudes. `id` is the identifier for GC sub-population; `id = 0` means GCs from the IGM, while others are from galaxies.
 simulate_Y <- function(S, l0, c, N, R_eff, e, n, theta, mu, sigma){
   A <- sf::st_area(st_as_sf(S))
   K <- nrow(c)

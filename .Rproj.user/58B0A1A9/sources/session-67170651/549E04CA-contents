@@ -1,5 +1,0 @@
-# Photometric measurement uncertainty
- 
-err_M <- function(M, m0 = 25.5, a = 0.0884, b = 0.645){
-  a*exp(b*(M - m0))
-}

@@ -1,4 +1,4 @@
-# log-likelihood of parametric finite mixture model
+# Log-likelihood of parametric finite-mixture model.
 mix_func <- function(par, dat){
   w <- par[1]
   wr <- par[2]

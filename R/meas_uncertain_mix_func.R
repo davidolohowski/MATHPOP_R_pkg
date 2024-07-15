@@ -1,11 +1,19 @@
-# fitting the mixture model with noisy data
+#' @title Fitting the mixture model with noisy point source data
+#' 
+#' @description Function to obtain probabilistic GC catalog based on the parametric finite-mixture model in Li et al. (2024).
+#' 
+#' @param dat A data frame that contains the point source data used to obtain the probabilistic GC catalog. Should contain the columns `C` for GC color; `F814W` for GC magnitudes; `C_err` for measurement uncertainty in color; `M_err` for measurement uncertainty in magnitudes.
+#' @param n_iter An integer for number of iteration to jitter the sources with their measurement uncertainty.
+#' @param seed An integer for the random seed. Default to 12345.
+#' @export
+#' @return A list with three objects `prob`, `par`, and `sim`. `prob` contains the computed probability that a source is a GC. `par` contains the inferred parameter values for the finite-mixture model. `sim` contains the jittered point source data.
 meas_uncertain_mix_func <- function(dat, n_iter, seed = 12345){
   set.seed(seed)
   p_mat <- matrix(0, ncol = n_iter, nrow = nrow(dat))
   par_mat <- matrix(0, ncol = 9, nrow = n_iter)
   sim_dat <- data.frame()
   for(i in 1:n_iter){
-    sim_CM <- as.data.frame(t(apply(dat_Jans[,c('C', 'F814W', 'M_err', 'C_err')], 1,
+    sim_CM <- as.data.frame(t(apply(dat[,c('C', 'F814W', 'M_err', 'C_err')], 1,
                                     function(x){MASS::mvrnorm(n = 1, x[c(1,2)], Sigma = matrix(c(x[4]^2, x[3]^2, x[3]^2, x[3]^2), 2))})))
 
     dat <- filter(sim_CM, C > 0.8 & C < 2.4)[,c('C', 'F814W')]

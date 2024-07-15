@@ -15,6 +15,7 @@
 #' @param b1 Rate at which the uncertainty increases with `M`.
 #' @keywords Simulate Point Patterns Sersic
 #' @export
+#' @return A data frame with six columns. `x`, `y` columns give the locations of the simulated GCs. `M` gives the noisy GC magnitudes. `Mt` gives the true GC magnitudes. `id` is the identifier for GC sub-population; `id = 0` means GCs from the IGM, while others are from galaxies. `e_M` gives the measurement uncertainty.
 simulate_Y_noisy <- function(S, l0, c, N, R_eff, e, n, theta, mu, sigma, m0 = 25.5, b0 = 0.0884, b1 = 0.645){
   A <- sf::st_area(st_as_sf(S))
   K <- nrow(c)

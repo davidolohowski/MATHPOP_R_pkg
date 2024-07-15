@@ -13,7 +13,7 @@
 The DESCRIPTION file:
 \packageDESCRIPTION{MATHPOP}
 \packageIndices{MATHPOP}
-~~ An overview of how to use the package, including the most important functions ~~
+For an overview and introduction of the package, see the \href{https://ddavidli.com/MATHPOP/}{MATHPOP webpage}. See \href{https://ddavidli.com/MATHPOP/vignette.html}{here} for a quick start on how to use the package.
 }
 \author{
 \packageAuthor{MATHPOP}
@@ -21,15 +21,5 @@ The DESCRIPTION file:
 Maintainer: \packageMaintainer{MATHPOP}
 }
 \references{
-~~ Literature or other references for background information ~~
-}
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R documentation ~~
-~~ directory ~~
-\keyword{ package }
-\seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
-}
-\examples{
-~~ simple examples of the most important functions ~~
+Li et al. (2024) "Discovery of Two Ultra-Diffuse Galaxies with Unusually Bright Globular Cluster Luminosity Functions via a Mark-Dependently Thinned Point Process (MATHPOP)", submitted to the Astrophysical Journal.
 }

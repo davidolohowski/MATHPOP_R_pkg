@@ -15,7 +15,6 @@ fit_MATHPOP(
   Theta = NULL,
   tune,
   n = 1000,
-  gamma = 0.1,
   prob_model = TRUE,
   seed = 12345,
   burnin = 0.1
@@ -30,7 +29,7 @@ fit_MATHPOP(
 
 \item{prior}{A List. A list that specifies the parameter values of the prior distributions of the model parameters, specified in a similar fashion as \code{fixed_Theta}.}
 
-\item{p}{A numeric value or vector. Crowding effect. Either a numeric value between (0,1), or a numeric vector whose entries are all in (0,1) and length equal to \code{n_grid} in \code{spat_dom} with each numeric element being the crowding effect at the location of the spatial grid. In the current implementation, it is default to 1 (no crowding).}
+\item{p}{A numeric value or vector. Crowding effect. Either a numeric value between \eqn{(0,1)}, or a numeric vector whose entries are all in \eqn{(0,1)} and length equal to \code{n_grid} in \code{spat_dom} with each numeric element being the crowding effect at the location of the spatial grid. In the current implementation, it is default to 1 (no crowding).}
 
 \item{cf_error}{A List. List of parameters for completeness fraction and measurement uncertainties.}
 
@@ -41,8 +40,6 @@ fit_MATHPOP(
 \item{tune}{A List. Tuning parameters for initial MCMC pilot run.}
 
 \item{n}{An integer. Initial MCMC pilot run iteration. Default to 1000.}
-
-\item{gamma}{A positive numeric value. Scaling parameter for adaptive MCMC. Specified internally.}
 
 \item{prob_model}{Logical. Whether the GC data used is a probabilistic catalog or a binary catalog. Default to TRUE.}
 

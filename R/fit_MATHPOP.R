@@ -1,4 +1,4 @@
-# fit MATHPOP model with adaptive MCMC
+# Fit MATHPOP model with adaptive MCMC.
 #' 
 #' Function that fits the MATHPOP model
 #' @import tidyverse
@@ -11,20 +11,19 @@
 #' @param spat_dom A List. A list object containing a list called `vertices` that gives the vertices of the spatial domain, and a list of the number of integration grid called `n_grid`.
 #' @param fixed_Theta A List. A list that specifies the known parameters of GC system, which contains two list objects `gal` and `UDG` that specify the respective known parameters of normal galaxies and UDGs. If there are no normal galaxies in the data, `gal` does not need to be specified.
 #' @param prior A List. A list that specifies the parameter values of the prior distributions of the model parameters, specified in a similar fashion as `fixed_Theta`.
-#' @param p A numeric value or vector. Crowding effect. Either a numeric value between (0,1), or a numeric vector whose entries are all in (0,1) and length equal to `n_grid` in `spat_dom` with each numeric element being the crowding effect at the location of the spatial grid. In the current implementation, it is default to 1 (no crowding).
+#' @param p A numeric value or vector. Crowding effect. Either a numeric value between \eqn{(0,1)}, or a numeric vector whose entries are all in \eqn{(0,1)} and length equal to `n_grid` in `spat_dom` with each numeric element being the crowding effect at the location of the spatial grid. In the current implementation, it is default to 1 (no crowding).
 #' @param cf_error A List. List of parameters for completeness fraction and measurement uncertainties.
 #' @param M An integer. Total number of iteration to run the MCMC algorithm.
 #' @param Theta A List. Starting values of the MCMC chain. Default to `NULL`, and specified internally.
 #' @param tune A List. Tuning parameters for initial MCMC pilot run.
 #' @param n An integer. Initial MCMC pilot run iteration. Default to 1000.
-#' @param gamma A positive numeric value. Scaling parameter for adaptive MCMC. Specified internally.
 #' @param prob_model Logical. Whether the GC data used is a probabilistic catalog or a binary catalog. Default to TRUE.
 #' @param seed An integer. Random seed value. Default to 12345.
 #' @param burnin A numeric value. A real number between 0 and 1. Percentage of the sample to be discarded as burn-in for MCMC. Default to 0.1
 #' @keywords MATHPOP adaptive MCMC
 #' @export
 #' @return A data frame with `floor(burn_in*M)` number of rows that gives the posterior sample of the fitted MATHPOP model.
-fit_MATHPOP <- function(Data, spat_dom, fixed_Theta, prior, p = 1, cf_error, M, Theta = NULL, tune, n = 1000, gamma = 0.1, prob_model = TRUE, seed = 12345, burnin = 0.1){
+fit_MATHPOP <- function(Data, spat_dom, fixed_Theta, prior, p = 1, cf_error, M, Theta = NULL, tune, n = 1000, prob_model = TRUE, seed = 12345, burnin = 0.1){
   pb <- progress::progress_bar$new(format = "(:spin) [:bar] :percent [Elapsed time: :elapsedfull || Estimated time remaining: :eta || Current MCMC iteration: :current]",
                          total = M,
                          complete = "=",

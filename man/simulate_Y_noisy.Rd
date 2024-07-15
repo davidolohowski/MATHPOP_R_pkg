@@ -47,6 +47,9 @@ simulate_Y_noisy(
 
 \item{b1}{Rate at which the uncertainty increases with \code{M}.}
 }
+\value{
+A data frame with six columns. \code{x}, \code{y} columns give the locations of the simulated GCs. \code{M} gives the noisy GC magnitudes. \code{Mt} gives the true GC magnitudes. \code{id} is the identifier for GC sub-population; \code{id = 0} means GCs from the IGM, while others are from galaxies. \code{e_M} gives the measurement uncertainty.
+}
 \description{
 Simulate GC locations and magnitudes with noisy magnitudes based on a Sersic profile and Gaussian GCLF.
 }

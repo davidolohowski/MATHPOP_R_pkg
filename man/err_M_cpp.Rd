@@ -9,12 +9,15 @@ err_M_cpp(M, m0 = 25.5, b0 = 0.08836, b1 = 0.645)
 \arguments{
 \item{M}{Numeric with length 1. The true GC magnitude}
 
-\item{m0}{Numeric with length 1. The offset magnitude}
+\item{m0}{Numeric with length 1. The offset magnitude. Default to \code{m0 = 25.5}.}
 
-\item{b0}{Numeric with length 1. The uncertainty when M = m0}
+\item{b0}{Numeric with length 1. The uncertainty when M = m0. Default to \code{b0 = 0.08836}.}
 
-\item{b1}{Numeric with length 1. Rate at which the uncertainty increases with M}
+\item{b1}{Numeric with length 1. Rate at which the uncertainty increases with M. Default to \code{b1 = 0.645}.}
+}
+\value{
+The measurement uncertainty at the true magnitude \code{M}.
 }
 \description{
-C++ implementation of the photometric measurement uncertainty.
+Compute the photometric measurement uncertainty based on \deqn{\sigma(M) = \beta_0\exp(\beta_1(M - m_0)).}
 }

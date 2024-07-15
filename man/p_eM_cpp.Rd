@@ -2,7 +2,7 @@
 % Please edit documentation in R/RcppExports.R
 \name{p_eM_cpp}
 \alias{p_eM_cpp}
-\title{C++ implementation to calculate the proportion of remaining GCs after removal of faint GCs}
+\title{C++ implementation to calculate the proportion of remaining GCs after removal of faint GCs.}
 \usage{
 p_eM_cpp(Lim, mu, sigma, m0, b0, b1, a, n = 50L)
 }
@@ -21,8 +21,12 @@ p_eM_cpp(Lim, mu, sigma, m0, b0, b1, a, n = 50L)
 
 \item{a}{Numeric with length 1. Rate at which the completeness fraction drops with M}
 
-\item{n}{Integer. Number of integration points used to marginalize out the true magnitude. Default to 20.}
+\item{n}{Integer. Number of integration points used to marginalize out the true magnitude. Default to 50.}
+}
+\value{
+A numeric value between \eqn{(0,1)}: the proportion of the GCs remaining after removing the faint GCs.
 }
 \description{
-C++ implementation to calculate the proportion of remaining GCs after removal of faint GCs
+Compute the proportion of the remaining GCs after removing the faint GCs based on their noisy magnitudes and the completeness fraction \eqn{f(M)}.
+It computes the following integral \deqn{\int_{-\infty}^\infty\varphi(m; \mu_{\text{TO}}, \sigma^2)f(m)dm,} where the noisy GCLF \eqn{\varphi(m; \mu_{\text{TO}}, \sigma^2)} is obtained from \code{\link[=phi_eM_cpp]{phi_eM_cpp()}}.
 }

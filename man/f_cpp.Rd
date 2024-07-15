@@ -9,10 +9,13 @@ f_cpp(M, Lim, a = 1.5)
 \arguments{
 \item{M}{A numeric vector. The true GC magnitude}
 
-\item{Lim}{Numeric with length 1. 50\% completeness fraction}
+\item{Lim}{Numeric with length 1. 50\% completeness fraction.}
 
-\item{a}{Numeric with length 1. Rate at which the completeness fraction drops with M}
+\item{a}{Numeric with length 1. Rate at which the completeness fraction drops with M. Default to \code{a = 1.5}.}
+}
+\value{
+The completeness fraction evaluated at the true magnitude \code{M}.
 }
 \description{
-C++ implementation of the completeness fraction.
+Compute the completeness fraction based on \deqn{f(M)=\frac{1}{\exp(\alpha(M- M_{\text{Lim}}))}.}
 }

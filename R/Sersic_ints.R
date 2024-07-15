@@ -1,15 +1,18 @@
-#' Function to compute the intensity at the locations of a point pattern X given a Sersic intensity profile
-#'
+#' @title Function to compute the intensity at the locations of a point pattern `X` given a Sersic intensity profile
+#' 
+#' @description Compute the intensity of a point pattern `X` based on the Sersic profile given by \deqn{\Lambda(\mathbf{X}; N, R_h, n) = \frac{N b_n^{2n}}{2\pi R_h^2 n \Gamma(2n)e}\exp\left(-b_n\left(\frac{r(\mathbf{X})}{R_h}\right)^{1/n}\right),} 
+#' where \deqn{r^2(\mathbf{X}) = ((\mathbf{X}_x - c_x)\cos(\vartheta) - (\mathbf{X}_y - c_y)\sin(\vartheta))^2 + ((\mathbf{X}_x- c_x)\sin(\vartheta)+ (\mathbf{X}_y-c_y)\cos(\vartheta))^2/e^2.}.
+#' 
 #' @param X A two-column matrix of the GC point pattern locations. The first column is the x coordinate, the second column is the y coordinate.
 #' @param c A vector of length two for the central location of a galaxy. The first entry is the x coordinate of the galactic center, the second entry is the y coordinate.
 #' @param N A non-negative numeric value. Mean number of GC in a galaxy.
 #' @param R_eff A non-negative numeric value. Half-number radius of the GC system of a galaxy.
 #' @param e A non-negative numeric value. Aspect ratio of the GC system of a galaxy.
 #' @param n A non-negative numeric value. Sersic index of the GC system of a galaxy.
-#' @param theta A numeric value in (0, 2*pi). Orientation angle (in radian) of the GC system of a galaxy.
+#' @param theta A numeric value in \eqn{(0, 2\pi)}. Orientation angle (in radian) of the GC system of a galaxy.
 #' @keywords Sersic Intensity
 #' @export
-#' @return A numeric vector with the length equal to the number of row of X that gives the Sersic intensity at the locations specified by X. 
+#' @return A numeric vector with the length equal to the number of row of `X` that gives the Sersic intensity at the locations specified by `X`. 
 Sersic_ints <- function(X, # Point pattern
                         c, # Galactic Center
                         N, # Mean number of GCs
