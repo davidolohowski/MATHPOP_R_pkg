@@ -1,0 +1,7 @@
+useDynLib(MATHPOP, .registration=TRUE)
+importFrom(Rcpp, evalCpp)
+import(tidyverse, mixtools, sf, sp, raster, spatstat, VGAM,
+        progress, tikzDevice, ggridges, wesanderson,
+        ggnewscale, modeest, reshape2, HDInterval, parallel, loo, priorsense,
+        ggstar)
+exportPattern("^[[:alpha:]]+")

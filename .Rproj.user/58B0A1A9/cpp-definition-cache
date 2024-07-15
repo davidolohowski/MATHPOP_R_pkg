@@ -1,0 +1,99 @@
+[
+    {
+        "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
+        "file_last_write": 1721001209.0,
+        "definitions": [
+            {
+                "usr": "c:@F@err_M_cpp#d#d#d#d#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "err_M_cpp(double, double, double, double)",
+                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
+                "line": 12,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@f_cpp#$@N@Rcpp@S@Vector>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#d#d#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "f_cpp(NumericVector, double, double)",
+                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
+                "line": 23,
+                "column": 15,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@f_cpp_trunc#$@N@Rcpp@S@Vector>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#d#d#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "f_cpp_trunc(NumericVector, double, double)",
+                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
+                "line": 29,
+                "column": 15,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@dnorm_cpp#d#d#d#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "dnorm_cpp(double, double, double)",
+                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
+                "line": 35,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@phi_eM_cpp#$@N@Rcpp@S@Vector>#VI14#@N@Rcpp@ST>1#T@PreserveStorage#d#d#d#d#d#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "phi_eM_cpp(NumericVector, double, double, double, double, double, int)",
+                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
+                "line": 58,
+                "column": 15,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@Phi_f_cpp#d#d#d#I#d#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "Phi_f_cpp(double, double, double, int, double)",
+                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
+                "line": 81,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@p_eM_cpp#d#d#d#d#d#d#d#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "p_eM_cpp(double, double, double, double, double, double, double, int)",
+                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
+                "line": 99,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@Phi_f_trun_cpp#d#d#d#I#d#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "Phi_f_trun_cpp(double, double, double, int, double)",
+                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
+                "line": 111,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@F@p_eM_trun_cpp#d#d#d#d#d#d#d#d#I#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "p_eM_trun_cpp(double, double, double, double, double, double, double, double, int)",
+                "file": "/Users/davidolohowski/Desktop/MATHPOP/src/cpp_help_func.cpp",
+                "line": 126,
+                "column": 8,
+                "hidden": false
+            }
+        ],
+        "hidden": false
+    }
+]

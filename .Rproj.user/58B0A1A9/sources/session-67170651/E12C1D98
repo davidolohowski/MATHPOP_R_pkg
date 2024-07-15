@@ -1,0 +1,26 @@
+{
+    "id": "E12C1D98",
+    "path": "~/Desktop/MATHPOP/R/simulate_Y_noise.R",
+    "project_path": "R/simulate_Y_noise.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1721002150474.0,
+    "source_on_save": false,
+    "relative_order": 7,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "33,12",
+        "scrollLine": "28"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1721010505,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1721010505392,
+    "read_only": false,
+    "read_only_alternatives": []
+}
